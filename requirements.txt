@@ -1,0 +1,5 @@
+requests
+beautifulsoup4
+speedtest-cli
+pandas
+lxml
