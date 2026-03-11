@@ -3,32 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magdi Pro | المستودع التقني</title>
+    <title>Magdi Pro | الحلول الذكية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --main-bg: #0f172a; --card-bg: #1e293b; --accent: #38bdf8; --text: #f1f5f9; }
-        body { font-family: 'Tahoma', sans-serif; background-color: var(--main-bg); color: var(--text); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 15px; }
-        .container { background: var(--card-bg); width: 100%; max-width: 450px; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid #334155; text-align: center; }
-        .logo { font-size: 50px; margin-bottom: 20px; }
-        h1 { font-size: 1.8rem; margin-bottom: 10px; color: var(--accent); }
-        p { line-height: 1.6; color: #94a3b8; margin-bottom: 30px; }
-        .btn-box { display: flex; flex-direction: column; gap: 15px; }
-        .btn { padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; transition: 0.3s; font-size: 1.1rem; }
-        .btn-primary { background: var(--accent); color: #0f172a; }
-        .btn-secondary { border: 2px solid var(--accent); color: var(--accent); }
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
-        .footer { margin-top: 30px; font-size: 0.8rem; color: #64748b; }
+        :root { --primary: #38bdf8; --secondary: #818cf8; --dark: #0f172a; --card: #1e293b; }
+        
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+        
+        body {
+            margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #1e1b4b, #0f172a);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: white; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+        }
+
+        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+        .container { width: 90%; max-width: 500px; background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); text-align: center; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+
+        .profile-img { width: 100px; height: 100px; background: var(--primary); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 40px; box-shadow: 0 0 20px var(--primary); }
+
+        h1 { margin: 10px 0; font-size: 2rem; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .services { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 25px 0; }
+        .service-item { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.05); }
+        .service-item i { color: var(--primary); margin-bottom: 8px; display: block; }
+
+        .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px; border-radius: 14px; text-decoration: none; font-weight: 600; margin-bottom: 15px; position: relative; overflow: hidden; }
+        
+        .btn-main { background: var(--primary); color: var(--dark); }
+        .btn-main:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+
+        .btn-sub { border: 1px solid rgba(255,255,255,0.2); color: white; background: rgba(255,255,255,0.05); }
+        .btn-sub:hover { background: rgba(255,255,255,0.1); border-color: var(--primary); }
+
+        .footer { margin-top: 20px; font-size: 0.8rem; opacity: 0.6; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">👨‍💻</div>
+        <div class="profile-img"><i class="fas fa-code"></i></div>
         <h1>Magdi Pro</h1>
-        <p>مرحباً بك في عالم الأتمتة والحلول التقنية الذكية. انضم إلينا لاكتشاف أقوى السكربتات والأدوات البرمجية.</p>
-        <div class="btn-box">
-            <a href="https://t.me/MagdiPro1" class="btn btn-primary">🚀 دخول قناة التلجرام</a>
-            <a href="https://t.me/MagdiSupport_Bot" class="btn btn-secondary">👨‍🔧 اطلب خدمتك الخاصة</a>
+        <p>نطور لك المستقبل بأدوات اليوم الذكية</p>
+
+        <div class="services">
+            <div class="service-item"><i class="fab fa-telegram"></i> بوتات تلجرام</div>
+            <div class="service-item"><i class="fas fa-robot"></i> أتمتة مهام</div>
+            <div class="service-item"><i class="fas fa-database"></i> أنظمة محاسبية</div>
+            <div class="service-item"><i class="fas fa-shield-alt"></i> حماية وتأمين</div>
         </div>
-        <div class="footer">Sanaa, Yemen | 2026 <br> Produced by magdi160</div>
+        
+        <a href="https://t.me/MagdiPro1" class="btn btn-main">
+            <i class="fas fa-rocket"></i> انضم للقناة الرسمية
+        </a>
+        
+        <a href="https://t.me/MagdiSupport_Bot" class="btn btn-sub">
+            <i class="fas fa-comment-dots"></i> اطلب مشروعك الآن
+        </a>
+
+        <div class="footer">
+            Sanaa, Yemen | 2026 <br>
+            Designed with Passion by Magdi
+        </div>
     </div>
 </body>
 </html>
